@@ -33,6 +33,11 @@ class   CarritoCompras  {
 		produYcant2.producto = Producto1.nombre;
 		produYcant2.cantidad = 5;
 		this.items.push(produYcant2);
+		const	produYcant3	=	{};
+		//console.log('producto y cantidad',produYcant2);
+		produYcant3.producto = Producto4.nombre;
+		produYcant3.cantidad = 6;
+		this.items.push(produYcant3);
 	};
 	
 }
