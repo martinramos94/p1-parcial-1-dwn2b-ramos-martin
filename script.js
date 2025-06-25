@@ -7,8 +7,8 @@ class Producto{
 		this.precio =	precio ;
 		this.stock =	stock	;
 	}
-	mostrar =	function (){
-	return `Nombre del producto: ${this.nombre}\n Precio: $${this.precio}\n Stock: ${this.stock} unidades`
+	mostrar (){
+	return `Nombre del producto: ${this.nombre}\n Precio: $${this.precio}\n stock: ${this.stock} unidades`
 	}
 }
 
@@ -18,18 +18,28 @@ let Producto3 = new Producto('bicicleta', 1200000, 125);
 let Producto4 = new Producto('rollers', 75000, 39);
 
 class   CarritoCompras  {
-
-	constructor(){
-		this.items	= [];
-		this.agregarProducto	=	function(){
-			Number(CarritoCompras.items.push(Producto1));
-			Number(CarritoCompras.items.push(Producto2));
+	
+	items	= [];
+	
+	agregarProducto	(){
 		
-		};
-	}
-    // removerProducto ;	eliminar,
-    // calcularTotal ;	total
+		const	produYcant	=	{};
+		//console.log('producto y cantidad',produYcant);
+		produYcant.producto = Producto3.nombre;
+		produYcant.cantidad = 2;
+		this.items.push(produYcant);	
+		const	produYcant2	=	{};
+		//console.log('producto y cantidad',produYcant2);
+		produYcant2.producto = Producto1.nombre;
+		produYcant2.cantidad = 5;
+		this.items.push(produYcant2);
+	};
+	
 }
+
+const carritoCompras = new CarritoCompras();
+console.log('carrito',carritoCompras);
+carritoCompras.agregarProducto(Producto1);
 
 
 console.log(Producto1.mostrar());
@@ -37,7 +47,6 @@ console.log(Producto2.mostrar());
 console.log(Producto3.mostrar());
 console.log(Producto4.mostrar());
 
-console.log(CarritoCompras.items);
 
 //CarritoCompras.agregarProducto();
 // carritoCompras.removerProducto();
