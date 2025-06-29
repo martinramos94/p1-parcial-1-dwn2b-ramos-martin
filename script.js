@@ -40,18 +40,9 @@ class   CarritoCompras  {
 		this.items.push(produYcant3);
 	};
 
-	removerProducto(){
-		//console.log('productos',this.items)
-		this.items = this.items.filter(eliminar=> remover=! true)
+	removerProducto(producto){		
+		this.items = this.items.filter(item => item.producto !== producto )
 		console.log('productos',this.items)
-		// for (let supr of this.items){
-		// 	console.log('items',supr)
-		// }
-
-
-
-
-
 	}
 	
 }
@@ -60,8 +51,8 @@ const carritoCompras = new CarritoCompras();
 console.log('carrito',carritoCompras);
 carritoCompras.agregarProducto(Producto1);
 
-// let remover = carritoCompras;
-// remover.removerProducto();
+carritoCompras.removerProducto('rollers');
+//let remover = carritoCompras;
 
 
 // console.log(Producto1.mostrar());
