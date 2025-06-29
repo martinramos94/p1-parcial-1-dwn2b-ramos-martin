@@ -39,6 +39,20 @@ class   CarritoCompras  {
 		produYcant3.cantidad = 6;
 		this.items.push(produYcant3);
 	};
+
+	removerProducto(){
+		//console.log('productos',this.items)
+		this.items = this.items.filter(eliminar=> remover=! true)
+		console.log('productos',this.items)
+		// for (let supr of this.items){
+		// 	console.log('items',supr)
+		// }
+
+
+
+
+
+	}
 	
 }
 
@@ -46,11 +60,14 @@ const carritoCompras = new CarritoCompras();
 console.log('carrito',carritoCompras);
 carritoCompras.agregarProducto(Producto1);
 
+// let remover = carritoCompras;
+// remover.removerProducto();
 
-console.log(Producto1.mostrar());
-console.log(Producto2.mostrar());
-console.log(Producto3.mostrar());
-console.log(Producto4.mostrar());
+
+// console.log(Producto1.mostrar());
+// console.log(Producto2.mostrar());
+// console.log(Producto3.mostrar());
+// console.log(Producto4.mostrar());
 
 
 //CarritoCompras.agregarProducto();
