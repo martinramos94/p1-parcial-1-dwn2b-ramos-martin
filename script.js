@@ -45,6 +45,20 @@ class   CarritoCompras  {
 	}
 }
 
+class Cliente{
+
+	constructor(nombre,direccionEnvio,carrito){
+		this.nombre =	nombre ;
+		this.direccionEnvio =	direccionEnvio ;
+		this.carrito =	carrito	;
+	}
+	realizarCompra (){
+	return `Nombre del producto: ${this.nombre}\n Precio: $${this.precio}\n stock: ${this.stock} unidades`
+	}
+}
+
+const	pepe = new Cliente('pepe','calle falsa 1234',)
+
 
 const carritoCompras = new CarritoCompras();
 carritoCompras.agregarProducto(arco,5);
@@ -57,6 +71,8 @@ carritoCompras.removerProducto(rollers);
 console.log(`total`,carritoCompras.calcularTotal());
 
 carritoCompras.mostrarCarrito();
+
+const cliente = new Cliente();
 
 
 // console.log(Producto1.mostrar());
